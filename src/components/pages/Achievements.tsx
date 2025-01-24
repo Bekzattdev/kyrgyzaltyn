@@ -3,6 +3,7 @@ import scss from "./styles.module.scss";
 const Achievements = () => {
   return (
     <section id={scss.achiev}>
+      <div className={scss.gradientOverlay}></div>
       <div className="container">
         <ScrollAnimation>
           <div className={scss.content}>

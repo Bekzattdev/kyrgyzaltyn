@@ -38,7 +38,7 @@ export const invest = [
     link: "#",
     name: "Месторождение «Мироновское»",
     title:
-      "https://economist.kg/content/images/2024/08/66c5bfbf39daf-thumb-2.jpg",
+      "https://cdn-1.aki.kg/cdn-st-0/qY7/I/899023.5eef62e53e6ac6be106a9d852481827a.jpg  ",
   },
   {
     link: "#",
@@ -60,7 +60,7 @@ export const invest = [
     link: "#",
     name: "Месторождение кварцита Баладжан",
     title:
-      "https://economist.kg/content/images/size/w2000/format/webp/2024/07/snapedit_1721304767177-1.jpeg",
+      "https://cdn-1.aki.kg/127/.storage/limon/images/2014my/ad2e847f8d8a074b263f343026852e3e.jpg",
   },
   {
     link: "#",
@@ -72,7 +72,7 @@ export const invest = [
     link: "#",
     name: "Месторождение «Чакуш»",
     title:
-      "https://economist.kg/content/images/2023/11/00d27abd-c0f8-45a9-bba3-1eb415061d7b-1.jpg",
+      "https://www.utrk.kg/img/thumbnail/851461708786146_big.jpg",
   },
   {
     link: "#",
@@ -90,8 +90,8 @@ export const newsArr = [
   },
   {
     link: "#",
-    name: "Элдияр Калдарбеков освобожден от должности главы «Кыргызалтына»",
-    title: "https://cdn-0.aki.kg/cdn-st-0/qcv/2/1431887.e8d984795b6327e97939236f5ccd8f8b.jpg",
+    name: "Делегация ОАО «Кыргызалтын» ознакомилась с производством ювелирных заводов Узбекистана",
+    title: "https://ru.kyrgyzaltyn.kg/uploads/gallery/d5057ae9b53b967807995f1fb544c296.jpg",
   },
   {
     link: "#",

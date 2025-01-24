@@ -8,11 +8,22 @@
     transform: translateX(0);
   }
 }
+@keyframes slideOn {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-90%);
+  }
+}
 //! styles.module.scss
 #welcomePage {
   position: relative;
   height: 100vh;
   overflow: hidden;
+
   .content {
     height: 100%;
     display: flex;
@@ -22,6 +33,8 @@
     z-index: 2;
 
     video {
+      width: 100%;
+      height: 100vh;
       filter: brightness(50%);
       position: absolute;
       object-fit: cover;
@@ -29,14 +42,13 @@
     }
 
     .wellText {
+      align-items: center;
+      display: flex;
+      justify-content: space-between;
+      gap: 430px;
       position: relative;
-      max-width: 700px;
       padding: 20px;
       left: 40vh;
-      text-wrap: wrap;
-      opacity: 0;
-      transform: translateX(-20%);
-      animation: slideIn 1s ease-out forwards;
       h1 {
         font-size: 5rem;
         font-weight: bold;
@@ -64,13 +76,82 @@
           background-color: #aeaeae;
         }
       }
+      .text {
+        width: 700px;
+        opacity: 0;
+        animation: slideIn 1s ease-out forwards;
+      }
+      .currencyTable {
+        width: 450px;
+        animation: slideOn 1s ease-out forwards;
+        background-color: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        border-radius: 8px;
+        padding: 16px;
+
+        h2 {
+          font-size: 23px;
+          text-align: center;
+          margin-bottom: 12px;
+          color: #ffffff;
+        }
+
+        .dates {
+          display: flex;
+          justify-content: space-evenly;
+          font-size: 17px;
+          color: #ffffff;
+          margin-bottom: 12px;
+          font-weight: bold;
+        }
+        .curs {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          
+          div {
+            border-top: solid 1px #000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+          }
+        }
+        span {
+          font-weight: bold;
+          font-size: 22px;
+        }
+
+        .down {
+          color: #d61424;
+        }
+
+        .up {
+          color: #17b3a0;
+        }
+
+        .neutral {
+          color: #333;
+        }
+      }
     }
   }
 }
 
 // !Archienments
 #achiev {
-  padding: 40px 0 0 0;
+  .gradientOverlay {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    background: linear-gradient(
+      to bottom,
+
+      rgb(1, 24, 90) 0%,
+      rgb(255, 255, 255) 50%
+    );
+    z-index: 2;
+  }
   .content {
     b {
       color: #ca8f05;
@@ -148,27 +229,25 @@
 #goldGraf {
   padding: 40px 0 0 0;
   margin-inline: auto;
-  width: 1200px;
+  width: 610px;
   h1 {
-    font-size: 3rem;
+    font-size: 1.7rem;
     font-weight: bold;
     margin-bottom: 20px;
   }
 }
 
 // ! SOMgraf
-#somGraf{
+#somGraf {
   padding: 50px 0 0 0;
   margin-inline: auto;
-  width: 1200px;
+  width: 610px;
   h1 {
-    font-size: 3rem;
+    font-size: 1.7rem;
     font-weight: bold;
     margin-bottom: 20px;
   }
 }
-
-
 
 // ! News
 #news {
@@ -216,13 +295,41 @@
       }
 
       &:hover {
-        transform: scale(1); 
-        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); 
+        transform: scale(1);
+        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
       }
 
       &:hover img {
-        transform: scale(1.01); 
+        transform: scale(1.01);
       }
     }
   }
 }
+
+// ! >>>>
+#grafick {
+  .content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+//! map
+#maps {
+  padding: 60px 0 0 0;
+  h1 {
+    font-size: 1.7rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  .content {
+    iframe {
+      border-radius: 8px;
+      border: none;
+      width: 100%;
+    }
+  }
+}
+
+// !Cuuent

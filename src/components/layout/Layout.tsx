@@ -22,14 +22,14 @@ const Layout = () => {
   return (
     <section id={scss.layoutSite}>
       <header
-        className={
-          headerScroll
-            ? `${scss.headerScroll} ${scss.active}`
-            : `${scss.headerScroll}`
-        }
+       
       >
         <div className="container">
-          <div className={scss.content}>
+          <div   className={
+          headerScroll
+            ? `${scss.content} ${scss.active}`
+            : `${scss.content}`
+        }>
             <img src={logo} alt="logo" />
             <nav>
               {headLinks.map((item, idx) => (

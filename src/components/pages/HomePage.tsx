@@ -1,8 +1,8 @@
 import Achievements from "./Achievements";
-import GoldGrafick from "./GoldGrafick";
+import Grafick from "./Grafick";
 import Investment from "./Investment";
+import Maps from "./Maps";
 import News from "./News";
-import SomGrafick from "./SomGrafick";
 import Welcome from "./Welcome";
 const HomePage = () => {
   return (
@@ -10,9 +10,9 @@ const HomePage = () => {
     <Welcome/>
     <Achievements/> 
     <Investment/>
-    <GoldGrafick/>
-    <SomGrafick/>
+    <Grafick/>
     <News/>
+    <Maps/>
     </>
   );
 };

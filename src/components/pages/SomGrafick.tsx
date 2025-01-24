@@ -50,12 +50,6 @@ const SomGrafick: React.FC = () => {
           },
           options: {
             responsive: true,
-            scales: {
-              y: { 
-                title: { display: true, text: "Курс (KGS/USD)" },
-                beginAtZero: false,
-              },
-            },
             plugins: {
               legend: {
                 display: true,
@@ -75,7 +69,6 @@ const SomGrafick: React.FC = () => {
   return (
     <section id={scss.somGraf}>
       <ScrollAnimation>
-
       <h1>График курса сома к доллару</h1>
       <canvas ref={chartRef}></canvas>
       </ScrollAnimation>

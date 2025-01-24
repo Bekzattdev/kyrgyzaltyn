@@ -43,7 +43,7 @@ const GoldGrafick: React.FC = () => {
                 borderColor: "gold",
                 backgroundColor: "rgba(255, 215, 0, 0.3)",
                 borderWidth: 2,
-                tension: 0.1,
+                tension: 0.3,
                 fill: true,
               },
             ],
@@ -51,12 +51,9 @@ const GoldGrafick: React.FC = () => {
           options: {
             responsive: true,
 
-            scales: {
-              y: { title: { display: true, text: "Цена (USD)" } },
-            },
-            ticks: {
-              stepSize: 500,
-            },
+            // ticks: {
+            //   stepSize: 500,
+            // },
           },
         });
       }
