@@ -1,9 +1,9 @@
-import scss from "./styles.module.scss";
+import scss from "./Investment.module.scss"
 import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
-import { invest } from "../../routes/links";
 import { Link } from "react-router-dom";
-import ScrollAnimation from "../../ui/Animation/ScrollAnimation";
+import ScrollAnimation from "../../../../ui/Animation/ScrollAnimation";
+import { invest } from "../../../../routes/links";
 const Investment = () => {
   const [ref] = useKeenSlider<HTMLDivElement>({
     loop: true,

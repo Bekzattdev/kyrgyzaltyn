@@ -8,12 +8,12 @@ export const router: ReturnType<typeof createBrowserRouter> =
       path: "/",
       element: <Layout />,
       errorElement: <ErrorPage />,
-      // children: [
-      //   {
-      //     path: "about",
-      //     element: <About />,
-      //   },
-      // ],
+      children: [
+        {
+          path: "about",
+          element:""
+        },
+      ],
     },
 
     { path: "*", element: <ErrorPage /> },

@@ -1,5 +1,5 @@
-import ScrollAnimation from "../../ui/Animation/ScrollAnimation";
-import scss from "./styles.module.scss";
+import ScrollAnimation from "../../../../ui/Animation/ScrollAnimation";
+import scss from "./Achievment.module.scss"
 const Achievements = () => {
   return (
     <section id={scss.achiev}>

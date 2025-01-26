@@ -1,7 +1,7 @@
-import scss from "./styles.module.scss";
-import { newsArr } from "../../routes/links";
+import scss from "./News.module.scss"
+import { newsArr } from "../../../../routes/links";
 import { Link } from "react-router-dom";
-import ScrollAnimation from "../../ui/Animation/ScrollAnimation";
+import ScrollAnimation from "../../../../ui/Animation/ScrollAnimation";
 const News = () => {
   return (
     <section id={scss.news}>

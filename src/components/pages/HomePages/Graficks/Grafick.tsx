@@ -1,6 +1,6 @@
 import GoldGrafick from "./GoldGrafick";
 import SomGrafick from "./SomGrafick";
-import scss from "./styles.module.scss"
+import scss from "./Graficks.module.scss"
 const Grafick = () => {
   return (
     <section id={scss.grafick}>

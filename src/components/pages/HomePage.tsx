@@ -1,9 +1,10 @@
-import Achievements from "./Achievements";
-import Grafick from "./Grafick";
-import Investment from "./Investment";
-import Maps from "./Maps";
-import News from "./News";
-import Welcome from "./Welcome";
+import Achievements from "./HomePages/Achievment/Achievements";
+import Grafick from "./HomePages/Graficks/Grafick";
+import Investment from "./HomePages/Investment/Investment";
+import Maps from "./HomePages/Maps/Maps";
+import News from "./HomePages/News/News";
+import Welcome from "./HomePages/Welcome/Welcome";
+
 const HomePage = () => {
   return (
     <>

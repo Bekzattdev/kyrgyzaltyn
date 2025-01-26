@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
-import scss from "./styles.module.scss";
-import vid from "../../assets/Market Loop Background Video - High Resolution.mp4";
-import rus from "../../assets/rus.png";
-import usd from "../../assets/usd.png";
-import chy from "../../assets/cny.png";
-import kzt from "../../assets/kzt.png";
-import eur from "../../assets/eur.png";
+import scss from "./Welcome.module.scss"
+import vid from "../../../../assets/Market Loop Background Video - High Resolution.mp4"
+import rus from "../../.././../assets/rus.png";
+import usd from "../../.././../assets/usd.png";
+import chy from "../../.././../assets/cny.png";
+import kzt from "../../.././../assets/kzt.png";
+import eur from "../../.././../assets/eur.png";
 
 type Tdata = {
   flag: string;

@@ -1,11 +1,11 @@
 import React, { useEffect, useRef } from "react";
 import Chart from "chart.js/auto";
 import { CategoryScale } from "chart.js";
-import scss from "./styles.module.scss";
-import ScrollAnimation from "../../ui/Animation/ScrollAnimation";
+import scss from "./Graficks.module.scss"
+import ScrollAnimation from "../../../../ui/Animation/ScrollAnimation";
 Chart.register(CategoryScale);
 
-const GoldGrafick: React.FC = () => {
+const SomGrafick: React.FC = () => {
   const chartRef = useRef<HTMLCanvasElement | null>(null);
 
   useEffect(() => {
@@ -35,13 +35,13 @@ const GoldGrafick: React.FC = () => {
             ],
             datasets: [
               {
-                label: "Цена золота (USD)",
+                label: "Курс сома к USD",
                 data: [
-                  3900, 3500, 3768, 3234, 3880, 3490, 3830, 4050, 3788, 4300,
-                  4149, 4500,
+                  85.2, 86.1, 85.7, 86.8, 85.4, 84.9, 85.5, 86.2, 85.9, 86.4,
+                  87.1, 86.8,
                 ],
-                borderColor: "gold",
-                backgroundColor: "rgba(255, 215, 0, 0.3)",
+                borderColor: "#007bff",
+                backgroundColor: "rgba(0, 123, 255, 0.3)",
                 borderWidth: 2,
                 tension: 0.3,
                 fill: true,
@@ -50,10 +50,12 @@ const GoldGrafick: React.FC = () => {
           },
           options: {
             responsive: true,
-
-            // ticks: {
-            //   stepSize: 500,
-            // },
+            plugins: {
+              legend: {
+                display: true,
+                position: "top",
+              },
+            },
           },
         });
       }
@@ -65,14 +67,13 @@ const GoldGrafick: React.FC = () => {
   }, []);
 
   return (
-    <section id={scss.goldGraf}>
+    <section id={scss.somGraf}>
       <ScrollAnimation>
-
-      <h1>График цены на золото</h1>
+      <h1>График курса сома к доллару</h1>
       <canvas ref={chartRef}></canvas>
       </ScrollAnimation>
     </section>
   );
 };
 
-export default GoldGrafick;
+export default SomGrafick;
