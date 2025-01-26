@@ -1,5 +1,5 @@
 import Achievements from "./HomePages/Achievment/Achievements";
-import Grafick from "./HomePages/Graficks/Grafick";
+import GoldCompany from "./HomePages/Graficks/GoldGrafick";
 import Investment from "./HomePages/Investment/Investment";
 import Maps from "./HomePages/Maps/Maps";
 import News from "./HomePages/News/News";
@@ -11,7 +11,7 @@ const HomePage = () => {
     <Welcome/>
     <Achievements/> 
     <Investment/>
-    <Grafick/>
+    <GoldCompany/>
     <News/>
     <Maps/>
     </>

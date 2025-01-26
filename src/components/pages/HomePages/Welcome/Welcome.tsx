@@ -1,6 +1,6 @@
+import scss from "./Welcome.module.scss";
 import { useEffect, useState } from "react";
-import scss from "./Welcome.module.scss"
-import vid from "../../../../assets/Market Loop Background Video - High Resolution.mp4"
+// import vid from "../../../../assets/Market Loop Background Video - High Resolution.mp4";
 import rus from "../../.././../assets/rus.png";
 import usd from "../../.././../assets/usd.png";
 import chy from "../../.././../assets/cny.png";
@@ -64,7 +64,7 @@ const Welcome = () => {
   return (
     <section id={scss.welcomePage}>
       <div className={scss.content}>
-        <video
+        {/* <video
           autoPlay={true}
           muted
           controls={0}
@@ -72,15 +72,17 @@ const Welcome = () => {
           loop
           type="video/mp4"
           src={vid}
-        ></video>
+        ></video> */}
         <div className={scss.wellText}>
           <div className={scss.text}>
-            <h1>Кыргызалтын</h1>
+            <h1>
+              Золотодобывающая компания <span>Кыргызалтын</span>
+            </h1>
             <p>
-              Крупнейшее отечественное предприятие Кыргызской Республики,
-              специализирующееся на освоении месторождений золота, играет
-              ключевую роль в развитии экономики страны. Компания обеспечивает
-              значительный вклад в национальный ВВП, создаёт рабочие места и
+              Крупнейшее предприятие Кыргызской Республики,
+              специализирующееся на освоении месторождений золота, <br /> играет
+              ключевую роль в развитии экономики страны. <br /> Компания обеспечивает
+              значительный вклад в ВВП, создаёт рабочие места и
               привлекает инвестиции.
             </p>
             <button>Свяжитесь и нами</button>

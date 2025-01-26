@@ -1,15 +1,15 @@
 import scss from "./Layout.module.scss";
 import logo from "../../assets/logoKyrgyz.png";
 import HomePage from "../pages/HomePage";
-import { headLinks } from "../../routes/links";
-import { Link } from "react-router-dom";
 import linkedin from "../../assets/lin.svg";
 import whatsapp from "../../assets/whatsapp.svg";
 import mail from "../../assets/mail.svg";
 import { useEffect, useState } from "react";
+import { headLinks } from "../../routes/links";
 
 const Layout = () => {
   const [headerScroll, setHeaderScroll] = useState(false);
+  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -21,28 +21,44 @@ const Layout = () => {
 
   return (
     <section id={scss.layoutSite}>
-      <header
-       
-      >
+      <header>
         <div className="container">
-          <div   className={
-          headerScroll
-            ? `${scss.content} ${scss.active}`
-            : `${scss.content}`
-        }>
+          <div
+            className={
+              headerScroll
+                ? `${scss.content} ${scss.active}`
+                : `${scss.content}`
+            }
+          >
             <img src={logo} alt="logo" />
             <nav>
               {headLinks.map((item, idx) => (
-                <div key={idx} className={scss.routes}>
-                  <Link to={item.link}>
-                    <p>{item.name}</p>
-                  </Link>
+                <div
+                  key={idx}
+                  className={scss.route_wrapper}
+                  onMouseEnter={() => setHoveredIndex(idx)}
+                  onMouseLeave={() => setHoveredIndex(null)}
+                >
+                  <a href={item.link} className={scss.route_link}>
+                    {item.name}
+                  </a>
+
+                  {hoveredIndex === idx && item.subLinks.length > 0 && (
+                    <div className={scss.modali}>
+                      <ul>
+                        {item.subLinks.map((subLink, subIdx) => (
+                          <p key={subIdx}>{subLink}</p>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
                 </div>
               ))}
             </nav>
           </div>
         </div>
       </header>
+
       <main>
         <HomePage />
       </main>

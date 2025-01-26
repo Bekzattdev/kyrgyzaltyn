@@ -3,7 +3,6 @@ import scss from "./Achievment.module.scss"
 const Achievements = () => {
   return (
     <section id={scss.achiev}>
-      <div className={scss.gradientOverlay}></div>
       <div className="container">
         <ScrollAnimation>
           <div className={scss.content}>
@@ -14,10 +13,9 @@ const Achievements = () => {
                 <p>
                   <b>Увеличение численности сотрудников:</b> По состоянию на 31
                   октября 2024 года в компании работало 3424 постоянных
-                  сотрудника, <br /> из которых 3408 — граждане Кыргызской
+                  сотрудника, из которых 3408 — граждане Кыргызской
                   Республики <br />
-                  <b>Создание рабочих мест:</b> Компания поддержала проект по{" "}
-                  <br />
+                  <b>Создание рабочих мест:</b> Компания поддержала проект по
                   созданию 3–5 швейных мини-цехов что обеспечило от 50 до 100
                   новых рабочих мест для женщин и молодежи.
                   <br />
@@ -26,7 +24,7 @@ const Achievements = () => {
                   проблемы с водоснабжением и транспортом для пенсионеров.
                 </p>
               </div>
-              <div className={scss.counts}>
+              {/* <div className={scss.counts}>
                 <div className={scss.start}>
                   <div>
                     <h2>1992</h2>
@@ -62,7 +60,25 @@ const Achievements = () => {
                     </p>
                   </div>
                 </div>
-              </div>
+              </div> */}
+               <div className={scss.grid}>
+          <div className={scss.stat}>
+            <h3>30+</h3>
+            <p>Лет опыта</p>
+          </div>
+          <div className={scss.stat}>
+            <h3>1000+</h3>
+            <p>Сотрудников</p>
+          </div>
+          <div className={scss.stat}>
+            <h3>5000кг</h3>
+            <p>Годовая добыча</p>
+          </div>
+          <div className={scss.stat}>
+            <h3>10  +</h3>
+            <p>Месторождений</p>
+          </div>
+        </div>
             </div>
 
             <div className={scss.achievPhoto}>

@@ -9,7 +9,7 @@
     position: fixed;
     display: flex;
     justify-content: center;
-    background: #fff;
+    background: #1a1a1a;
     width: 100%;
 
     .content {
@@ -18,28 +18,60 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
+
       .content.active {
         padding: 5px 0;
-
       }
+
       img {
         width: 300px;
       }
+
       nav {
-        width: 50%;
+        width: 60%;
         display: flex;
         justify-content: space-between;
-        a {
-          color: #586667;
-          font-size: 1.2rem;
-          line-height: 1.5;
-          &:hover {
-            color: #ca8f05;
+
+        .route_wrapper {
+          align-items: center;
+          
+          a {
+            color: #ffbc12;
+            font-size: 1.2rem;
+            line-height: 1.5;
+            text-decoration: none;
+            &:hover {
+              color: #ffdf95;
+            }
+          }
+        }
+        .modali {
+          padding: 20px;
+          position: absolute;
+          display: flex;
+          background: #1a1a1a;
+          border-radius: 0 0 8px 8px;
+          color: #ffbc12;
+          cursor: pointer;
+          
+         
+          p{
+            padding: 10px;
+            line-height: 20px;
+            transition: transform 0.3s ease;
+      
+            &:hover {
+              transform: translateY(-2px);
+              background: #586667;
+              border-radius: 4px;
+            }
+          
           }
         }
       }
     }
   }
+
   footer {
     background: #e1e1e1;
     display: flex;

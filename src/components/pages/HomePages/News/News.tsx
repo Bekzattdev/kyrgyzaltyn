@@ -10,12 +10,12 @@ const News = () => {
           <h1>Новости компании</h1>
           <div className={scss.content}>
             {newsArr.map((item, idx) => (
+              <div className={scss.step}>
               <Link to={item.link} key={idx}>
-                <div className={scss.block}>
                   <img src={item.title} alt="image" />
                   <p>{item.name}</p>
-                </div>
               </Link>
+              </div>
             ))}
           </div>
         </ScrollAnimation>
