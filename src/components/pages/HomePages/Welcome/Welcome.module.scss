@@ -40,7 +40,7 @@ $accent: #daa520;
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-   
+
     &::before {
       content: "";
       position: absolute;
@@ -105,63 +105,121 @@ $accent: #daa520;
           box-shadow: 0 6px 12px rgba($dark, 0.15);
         }
       }
-     
+
       .text {
         width: 700px;
         opacity: 0;
         animation: slideIn 1s ease-out forwards;
       }
-      .currencyTable {
-        width: 450px;
-        animation: slideOn 1s ease-out forwards;
-        background-color: rgba(255, 255, 255, 0.1);
-        backdrop-filter: blur(10px);
-        border-radius: 8px;
-        padding: 16px;
+      // .currencyTable {
+      //   width: 450px;
+      //   animation: slideOn 1s ease-out forwards;
+      //   background-color: rgba(255, 255, 255, 0.1);
+      //   backdrop-filter: blur(10px);
+      //   border-radius: 8px;
+      //   padding: 16px;
 
+      //   h2 {
+      //     font-size: 23px;
+      //     text-align: center;
+      //     margin-bottom: 12px;
+      //     color: #ffffff;
+      //   }
 
-        h2 {
-          font-size: 23px;
-          text-align: center;
-          margin-bottom: 12px;
-          color: #ffffff;
+      //   .dates {
+      //     display: flex;
+      //     justify-content: space-evenly;
+      //     font-size: 17px;
+      //     color: #ffffff;
+      //     margin-bottom: 12px;
+      //     font-weight: bold;
+      //   }
+      //   .curs {
+      //     display: flex;
+      //     flex-direction: column;
+      //     gap: 10px;
+
+      //     div {
+      //       border-top: solid 1px #c39a07;
+      //       display: flex;
+      //       justify-content: space-between;
+      //       align-items: center;
+      //     }
+      //   }
+      //   span {
+      //     font-weight: bold;
+      //     font-size: 22px;
+      //   }
+
+      //   .down {
+      //     color: #ff1f32;
+      //   }
+
+      //   .up {
+      //     color: #61fdeb;
+      //   }
+
+      //   .neutral {
+      //     color: #333;
+      //   }
+      // }
+    }
+    .goldRatesTable {
+      position: fixed;
+      animation: slideOn 1s ease-out forwards;
+      background:#1a1a1ad0;
+      backdrop-filter: blur(10px);
+      border-radius: 8px;
+      // height: 500px;  
+      display: flex;
+      flex-direction: column;
+      left: 81%;
+      top:8%;
+      width: 360px;
+      padding: 15px;
+      
+
+      h4 {
+        text-align: center;
+        margin-bottom: 16px;
+
+        span {
+          color: #ffd700;
         }
+      }
 
-        .dates {
+      .table {
+        display: flex;
+        flex-direction: column;
+
+        .headerRow,
+        .dataRow {
           display: flex;
-          justify-content: space-evenly;
-          font-size: 17px;
-          color: #ffffff;
-          margin-bottom: 12px;
-          font-weight: bold;
-        }
-        .curs {
-          display: flex;
-          flex-direction: column;
-          gap: 10px;
+          justify-content: space-between;
+          padding: 8px 16px;
+          font-size: 14px;
+          p {
+            color: #ffd900;
+            font-weight:600;
+
+          }
 
           div {
-            border-top: solid 1px #c39a07;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+            flex: 1;
+            text-align: center;
+            font-weight:600;
+          }
+
+          &:nth-child(odd) {
+            background-color: #ffb30052;
+            // backdrop-filter: blur(10px);
+            border-radius: 4px;
           }
         }
-        span {
+
+        .headerRow {
+          color: #ffb400;
           font-weight: bold;
-          font-size: 22px;
-        }
-
-        .down {
-          color: #ff1f32;
-        }
-
-        .up {
-          color: #61fdeb;
-        }
-
-        .neutral {
-          color: #333;
         }
       }
     }

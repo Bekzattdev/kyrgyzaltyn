@@ -1,11 +1,11 @@
 import scss from "./Layout.module.scss";
 import logo from "../../assets/logoKyrgyz.png";
-import HomePage from "../pages/HomePage";
 import linkedin from "../../assets/lin.svg";
 import whatsapp from "../../assets/whatsapp.svg";
 import mail from "../../assets/mail.svg";
 import { useEffect, useState } from "react";
 import { headLinks } from "../../routes/links";
+import { Link, Outlet } from "react-router-dom";
 
 const Layout = () => {
   const [headerScroll, setHeaderScroll] = useState(false);
@@ -30,7 +30,9 @@ const Layout = () => {
                 : `${scss.content}`
             }
           >
-            <img src={logo} alt="logo" />
+            <Link to="/">
+              <img src={logo} alt="logo" />
+            </Link>
             <nav>
               {headLinks.map((item, idx) => (
                 <div
@@ -39,9 +41,9 @@ const Layout = () => {
                   onMouseEnter={() => setHoveredIndex(idx)}
                   onMouseLeave={() => setHoveredIndex(null)}
                 >
-                  <a href={item.link} className={scss.route_link}>
+                  <Link to={item.link} className={scss.route_link}>
                     {item.name}
-                  </a>
+                  </Link>
 
                   {hoveredIndex === idx && item.subLinks.length > 0 && (
                     <div className={scss.modali}>
@@ -58,9 +60,8 @@ const Layout = () => {
           </div>
         </div>
       </header>
-
       <main>
-        <HomePage />
+        <Outlet />
       </main>
       <footer id={scss.foot}>
         <div className={scss.content}>

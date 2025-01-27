@@ -1,6 +1,6 @@
 export const headLinks = [
   {
-    link: "#",
+    link: "about",
     name: "О компании",
     subLinks: ["Общая информация", "История"],
   },

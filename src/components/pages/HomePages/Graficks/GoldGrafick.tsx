@@ -13,7 +13,7 @@ const GoldCompany: React.FC = () => {
   const investmentRef = useRef<HTMLCanvasElement | null>(null);
 
   useEffect(() => {
-    const charts = [];
+    const charts: Chart<"line", number[], string>[] = [];
     const createChart = (
       ref: React.RefObject<HTMLCanvasElement>,
       label: string,
